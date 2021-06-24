@@ -9,12 +9,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from parsel import Selector
 from selenium.common.exceptions import TimeoutException
 
-
 driver = webdriver.PhantomJS(service_args=["--load-images=no"])
 
 class PICScraper():
     def __init__(self):
-        self.site_url = ''
+        self.site_url = None
         self.categories = {
             'Capacitance': '/search/product.html?categoryId=1207',
             'Circuit Protection': '/search/product.html?categoryId=1097',
@@ -26,10 +25,12 @@ class PICScraper():
         }
 
     def scrape(self):
-        for category, category_url in self.categories.items():
-            self.select_scrap(self.site_url+category_url, category)
-            print(f'\nScrapped {category}'.upper())
-
+        if self.site_url is not None:
+            for category, category_url in self.categories.items():
+                self.select_scrap(self.site_url+category_url, category)
+                print(f'\nScrapped {category}'.upper())
+        else:
+            print('real url is removed. this script is meant for the reference')
         driver.quit()
 
     def select_scrap(self, url, filename):
@@ -106,5 +107,7 @@ if __name__ == '__main__':
     scraper = PICScraper()
     scraper.scrape()
 
+# real url is removed. this script for reference
+# below sample command line to run the script
 # to run the script
 # python picscraper.py

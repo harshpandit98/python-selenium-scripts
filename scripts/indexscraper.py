@@ -181,7 +181,7 @@ if url is not None:
 else:
     print('real url is removed. this script is meant for the reference')
 
-# real url is removed. this script meant to be used for reference
+# real url is removed. this script meant for reference
 # below sample command line to run the script
 # python indexscraper.py --district_name=सातारा  --sro_name='Karad 2' --year=2021 --doc_no=1
 # python indexscraper.py --district_name=कोल्हापूर  --sro_name=Chandgad --year=2021 --doc_no=1
