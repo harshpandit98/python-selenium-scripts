@@ -1,3 +1,3 @@
-# reference python selenium scripts 
+# python selenium scripts 
 
 - This script are meant for reference.
