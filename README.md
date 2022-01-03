@@ -1,7 +1,8 @@
 # Setup guide
 
 Clone with ssh repo url to a directory
-- `git clone --single-branch --branch add/haryanareragovin git@github.com:harshpandit98/python-selenium-scripts.git`
+
+`git clone --single-branch --branch add/haryanareragovin git@github.com:harshpandit98/python-selenium-scripts.git`
 
 Create virtualenv (python 3.8 or higher prefered)
 - `virtualenv venv`
